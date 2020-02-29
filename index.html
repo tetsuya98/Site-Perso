@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" class="h-100">
+ 	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <meta name="description" content="">
+	    <meta name="Josselin Abel" content="personnal web site">
+	    <meta name="generator" content="Jekyll v3.8.6">
+	    <title>Jabel</title>
+	    <link rel="icon" href="./img/totoro.png"/>
+
+	    	<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" type="text/css" href="config/bootstrap.css">
+		<script src="config/jquery.js"></script>
+		<script src="config/popper.js"></script>
+		<script src="config/bootstrap.js"></script>
+		<script src="config/JQueryRotate.js"></script>
+		<link href="./config/cover.css" rel="stylesheet">
+		<link href="https://getbootstrap.com/docs/4.4/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+
+	    <style>
+	      .bd-placeholder-img {
+	        font-size: 1.125rem;
+	        text-anchor: middle;
+	        -webkit-user-select: none;
+	        -moz-user-select: none;
+	        -ms-user-select: none;
+	        user-select: none;
+	      }
+
+	      @media (min-width: 768px) {
+	        .bd-placeholder-img-lg {
+	          font-size: 3.5rem;
+	        }
+	      }
+	    </style>
+
+    		<!-- Custom styles for this template -->
+    	<link href="https://getbootstrap.com/docs/4.4/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+  	</head>
+  	<body class="text-center">
+  		<div id="accueil">
+    		
+	  	</div> 
+    	<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    		<header class="masthead mb-auto"><div class="inner"></div></header>
+  			<main role="main" class="inner cover">
+
+    			<h1 class="cover-heading">A PROPOS DE MOI</h1>
+    			<br>
+    			<img class="rounded-circle rotation90" alt="Cinque Terre" width="150" height="150" src="img/profil2.jpeg" id="profil">
+    			<br>
+    			<br>
+    			<p >Etudiant en informatique depuis 3 ans, je suis particulièrement intéressé par le développement logiciel. J'ai une bonne maîtrise du JAVA et de solides bases en Programmation Objet. Je suis aussi intéressé par le par développement Web. J'ai au cours de mes études pris part à plusieurs projets durant lesquels j'ai appris différentes méthodes de gestion (ex : AGILE). Enfin, j'ai découvert l'informatique décisionnel durant mon premier stage et suis très intéressé par ce qu'il offre.</p>
+
+  			</main>
+
+  			<footer class="mastfoot mt-auto">
+    			<div class="inner">
+     				<a  href="docker.html"><img src="./img/white-totoro.png" id="totoro" width="25" height="25"></a>
+    			</div>
+    			<div class="inner">
+    				<small>Icons made by <a href="https://www.flaticon.com/authors/those-icons">Those Icons</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a></small>
+    				<small class="d-block mb-3 text-muted">&copy; Josselin Abel 2020</small>
+    			</div>
+  			</footer>
+		</div>
+</body>
+
+<script src="https://use.fontawesome.com/d7ac8cb0b1.js"></script>
+<script>
+	$("#profil").rotate({
+  bind:
+  {
+    mouseover : function() {
+    $(this).rotate({animateTo:360})
+  },
+  mouseout : function() {
+    $(this).rotate({animateTo:0})
+    }
+  }
+
+});
+$(function(){
+	$("#accueil").load("assets/head.html");
+});
+
+</script>
+
+  	
+</html>

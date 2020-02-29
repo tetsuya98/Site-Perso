@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en" class="h-100">
+ 	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <meta name="description" content="">
+	    <meta name="Josselin Abel" content="personnal web site">
+	    <meta name="generator" content="Jekyll v3.8.6">
+	    <title>Projet Web - Jabel</title>
+	    <link rel="icon" href="./img/totoro.png"/>
+
+	    	<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" type="text/css" href="config/bootstrap.css">
+		<script src="config/jquery.js"></script>
+		<script src="config/popper.js"></script>
+		<script src="config/bootstrap.js"></script>
+		<script src="config/JQueryRotate.js"></script>
+		<link href="./config/cover.css" rel="stylesheet">
+		<link href="https://getbootstrap.com/docs/4.4/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="congig/dashboard.css">
+
+	    <style>
+	      .bd-placeholder-img {
+	        font-size: 1.125rem;
+	        text-anchor: middle;
+	        -webkit-user-select: none;
+	        -moz-user-select: none;
+	        -ms-user-select: none;
+	        user-select: none;
+	      }
+
+	      @media (min-width: 768px) {
+	        .bd-placeholder-img-lg {
+	          font-size: 3.5rem;
+	        }
+	      }
+	    </style>
+
+    		<!-- Custom styles for this template -->
+    	<link href="https://getbootstrap.com/docs/4.4/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+  	</head>
+  	<body class="text-center">
+  		<div id="accueil">
+    		
+	  	</div> 
+    	<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    		<header class="masthead mb-auto"><div class="inner"></div></header>
+  			<main role="main" class="container">
+  				<div class="row">
+	  			<div class="col-md-auto">
+	  				<aside">
+						<ul id="list" class="list-group">
+							<li class="item list-group-item list-group-item-action" aria-labelledby="width: 25%" aria-label="width: 0%" value="projet_web/TP2/article.html" id="Pokemon">DUT1 TP2</li>
+							<li class="item list-group-item list-group-item-action" aria-labelledby="width: 25%" aria-label="width: 0%" value="projet_web/TP3/index.html" id="Template Articles">DUT1 TP3</li>
+							<li class="item list-group-item list-group-item-action" aria-labelledby="width: 25%" aria-label="width: 0%" value="projet_web/ProjetWebG-PourLesEtudiants/Programmes/Aff.html" id="WebGL">DUT2 TP WebGL</li>
+							<li class="item list-group-item list-group-item-action" aria-labelledby="width: 25%" aria-label="width: 0%" value="projet_web/DUT2 TP2/index.html" id="Formulaire JS">DUT2 TP2</li>
+							<li class="item list-group-item list-group-item-action" aria-labelledby="width: 25%" aria-label="width: 0%" value="projet_web/projetSalleTp/web" id="SalleTP">L3 TP Symfony</li>
+							<li class="item list-group-item list-group-item-action" aria-labelledby="width: 25%" aria-label="width: 0%" value="Conduite_Projet/web" id="Alternance">M1 Alternance</li>
+						</ul>
+					</aside>
+				</div>
+				<div class="col">
+					<div id="preview" class="card">
+						  	<div class="card-body embed-responsive embed-responsive-16by9">
+						  		<iframe id="iframe" class="embed-responsive-item" src="page.php"></iframe>
+						    </div>
+						    	<a id="preview-btn" href="#" class="btn btn-dark">Go to site</a>
+						</div>
+				</div>
+
+</div>
+
+
+				<script type="text/javascript">
+
+					/**
+					 * Affiche les infos du site
+					 */
+					function view(file)
+					{
+						$('#iframe').attr('src', file)
+					}
+
+					/**
+					 * Selectionne l'item dans la liste
+					 */
+					function select(item)
+					{
+						var $items = $('.item')
+						var $item = $(item)
+						var value = $item.attr('value')
+						var id = $item.attr('id')
+
+						$('#preview-title').text(id)
+						$('#preview-btn').text('Go to ' + id)
+						$('#preview-btn').attr('href', value)
+						// Selection dans le menu
+						$items.removeClass('bg-dark text-white')
+						$item.addClass('bg-dark text-white')
+
+						// affichage de la vue
+						view($item.attr('value'))
+					}
+
+					////////////////////////////////////////
+					var $items = $('.item');
+					$items.each(function(index, item){
+						var $item = $(item)
+						$item.click(function(){
+							select(item)
+						})
+					})
+
+					select($items[0])
+				</script>
+  			</main>
+
+  			<footer class="mastfoot mt-auto">
+  				<br>
+    			<div class="inner">
+     				<a  href="docker.html"><img src="./img/white-totoro.png" id="totoro" width="25" height="25"></a>
+    			</div>
+    			<div class="inner">
+    				<small>Icons made by <a href="https://www.flaticon.com/authors/those-icons">Those Icons</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a></small>
+    				<small class="d-block mb-3 text-muted">&copy; Josselin Abel 2020</small>
+    			</div>
+  			</footer>
+
+		</div>
+</body>
+
+<script src="https://use.fontawesome.com/d7ac8cb0b1.js"></script>
+<script>
+$(function(){
+	$("#accueil").load("assets/head.html");
+});
+</script>
+
+
+  	
+</html>
